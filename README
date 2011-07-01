@@ -1,0 +1,48 @@
+What is this:
+This is a XMPP component implementation.
+The external component connects to Jabber/XMPP server using XEP-0114 protocol. The code contains a gen_component behavior for handling routed packets in a structured fashion.
+
+test_component.erl contains minimal component code. Please refer to xep0114:test/0 function for usage example.
+
+Prerequisites:
+EXMPP library has to be installed.
+In order for component to be able to connect to the server, product-specific configuration has to be done on a server side.
+If you're using ejabberd, below is a fragment of ejabberd.cfg (release 2.0.5) that corresponds to test/0 mentioned above:
+
+% This fragment has to be added to a service list inside <listen> element; adjust host names acording to your domain names.
+
+<start of fragment>
+
+{7047, ejabberd_service,
+   [{hosts, ["test1.zephyr.local"],
+	 [{password, "secret"}]}]},
+
+{9049, ejabberd_service,
+   [{hosts, ["test2.zephyr.local"],
+	 [{password, "secret"}]}]},
+
+<end of fragment>
+
+Please refer to ejabberd installation guide for service configuration details.
+
+
+To run the test:
+
+1. Adjust host names according to your domain names both in the fragment below and in test:test_gen_component/0;
+2. Fire Erlang shell in a directory where files are and recompile:
+
+1>make:all([load]).
+
+3. From Erlang shell:
+
+2>test:test_gen_component().
+
+The output should show handshake messages. From now on you should be able to see services through conventional Jabber client
+using Service Discovery. It was tested with Adium and Psi. You will also see incoming packets as the client sends them to services.
+
+License and disclaimers:
+The code is free software and is licensed under GNU General Public License.
+Please refer to source code headers for details.
+
+Contact:
+Boris Okner at boris.okner@gmail.com

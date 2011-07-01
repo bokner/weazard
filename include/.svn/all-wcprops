@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/xmpp_component/!svn/ver/6/trunk/include
+END
+exmpp_nss.hrl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/xmpp_component/!svn/ver/6/trunk/include/exmpp_nss.hrl
+END
+exmpp_xmpp.hrl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/xmpp_component/!svn/ver/6/trunk/include/exmpp_xmpp.hrl
+END
+jlib.hrl
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/xmpp_component/!svn/ver/6/trunk/include/jlib.hrl
+END
+exmpp_client.hrl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/xmpp_component/!svn/ver/6/trunk/include/exmpp_client.hrl
+END
+exmpp.hrl
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/xmpp_component/!svn/ver/6/trunk/include/exmpp.hrl
+END
+exmpp_xml.hrl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/xmpp_component/!svn/ver/6/trunk/include/exmpp_xml.hrl
+END
