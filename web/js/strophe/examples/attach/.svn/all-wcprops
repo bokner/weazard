@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/erltwit/!svn/ver/2/trunk/web/js/strophe/examples/attach
+END
+manage.py
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/erltwit/!svn/ver/2/trunk/web/js/strophe/examples/attach/manage.py
+END
+boshclient.py
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/erltwit/!svn/ver/2/trunk/web/js/strophe/examples/attach/boshclient.py
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/erltwit/!svn/ver/2/trunk/web/js/strophe/examples/attach/__init__.py
+END
+settings.py
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/erltwit/!svn/ver/2/trunk/web/js/strophe/examples/attach/settings.py
+END
+urls.py
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/erltwit/!svn/ver/2/trunk/web/js/strophe/examples/attach/urls.py
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/erltwit/!svn/ver/2/trunk/web/js/strophe/examples/attach/README
+END

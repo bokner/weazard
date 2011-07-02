@@ -1,5 +1,9 @@
+Disclaimer:
+
+The code is not supported in any way
+
 What is this:
-This is a XMPP component implementation.
+XMPP component implementation.
 The external component connects to Jabber/XMPP server using XEP-0114 protocol. The code contains a gen_component behavior for handling routed packets in a structured fashion.
 
 test_component.erl contains minimal component code. Please refer to xep0114:test/0 function for usage example.
@@ -44,5 +48,3 @@ License and disclaimers:
 The code is free software and is licensed under GNU General Public License.
 Please refer to source code headers for details.
 
-Contact:
-Boris Okner at boris.okner@gmail.com

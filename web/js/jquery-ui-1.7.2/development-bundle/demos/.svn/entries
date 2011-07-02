@@ -1,0 +1,159 @@
+9
+
+dir
+30
+https://tagsahead.svn.beanstalkapp.com/erltwit/trunk/web/js/jquery-ui-1.7.2/development-bundle/demos
+https://tagsahead.svn.beanstalkapp.com/erltwit
+
+
+
+2009-08-12T22:53:58.325922Z
+5
+teamhand
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+29825b1a-b00e-4d25-8689-f372faa10077
+
+resizable
+dir
+
+show
+dir
+
+toggle
+dir
+
+slider
+dir
+
+removeClass
+dir
+
+switchClass
+dir
+
+progressbar
+dir
+
+tabs
+dir
+
+effect
+dir
+
+demos.css
+file
+
+
+
+
+2009-08-31T14:03:49.000000Z
+2e2ec04700af4ac5681a956cfe405c47
+2009-08-12T22:53:58.325922Z
+5
+teamhand
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+14338
+
+dialog
+dir
+
+accordion
+dir
+
+selectable
+dir
+
+images
+dir
+
+toggleClass
+dir
+
+droppable
+dir
+
+draggable
+dir
+
+hide
+dir
+
+index.html
+file
+
+
+
+
+2009-08-31T14:03:49.000000Z
+b05060c40fd9dd154b0fe017c1c10085
+2009-08-12T22:53:58.325922Z
+5
+teamhand
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+13544
+
+datepicker
+dir
+
+sortable
+dir
+
+animate
+dir
+
+addClass
+dir
+

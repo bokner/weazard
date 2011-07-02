@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Weazard</title>
+
+  <link type="text/css" href="js/jquery-ui-1.7.2/css/jquery-ui-1.7.2.custom.css" rel="stylesheet" /> 
+  <link type="text/css" href="js/jquery.message.css" rel="stylesheet" />
+ <!--link rel="stylesheet" href="js/jquery-treeview/demo/screen.css" type="text/css" /-->
+  <link rel="stylesheet" href="js/jquery-treeview/jquery.treeview.css" type="text/css" /> 
+  <!--link rel="stylesheet" href="js/boxy.css" type="text/css" /-->
+
+
+  <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.7.2.custom.min.js"></script>
+  <!--script type="text/javascript" src="js/jquery.boxy.js"></script-->
+ 
+
+ <script type="text/javascript" src="js/jquery.corner.js"></script>
+<script type="text/javascript" src="js/jquery.message.js"></script>
+<script type="text/javascript" src="js/jquery.layout.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>    
+<script type="text/javascript" src="js/jquery-treeview/jquery.treeview.js"></script>
+
+  <script language='javascript'
+	  type='text/javascript'
+	  src='js/strophe/b64.js'></script>
+  <script language='javascript'
+	  type='text/javascript'
+	  src='js/strophe/md5.js'></script>
+  <script language='javascript'
+	  type='text/javascript'
+	  src='js/strophe/sha1.js'></script>
+
+  <script language='javascript'
+	  type='text/javascript'
+	  src='js/strophe/strophe.js'></script>
+  <script language='javascript'
+	  type='text/javascript'
+	  src='js/jquery.spinner.js'></script>
+
+  <script language='javascript'
+	  type='text/javascript'
+	  src='js/weazard.js'></script>
+
+<style type="text/css">
+		body { font-size: 62.5%; background: url('images/demobkg_rotate.png') white center repeat fixed; opacity: 0.9;}
+		label, input { display:block; }
+		input.text { margin-bottom:12px; width:95%; padding: .4em; }
+		fieldset { padding:0; border:0; margin-top:25px; }
+		h1 { font-size: 1.2em; margin: .6em 0; }
+		.ui-button { outline: 0; margin:0; padding: .4em 1em .5em; text-decoration:none;  !important; cursor:pointer; position: relative; text-align: center; }
+		.ui-dialog .ui-state-highlight, .ui-dialog .ui-state-error { padding: .3em;  }
+
+
+    .active {	   
+		padding-right: 20px; 
+		font-weight: bold;  
+		color: green;
+		background: transparent url(images/transmit_go.png) no-repeat center right; 
+		}
+    .offline {	   
+			padding-right: 20px;
+			color:red;
+		   background-image:url(images/transmit_delete.png);
+		 	background-repeat: no-repeat;
+		 	background-position: center right;
+			background-size: 50%;
+		}
+    .connecting {	   
+			padding-right: 20px;
+		    color:blue;
+			background: transparent url(images/transmit_blue.png) no-repeat center right;}   
+                         
+	 #network div {
+ 
+		color:white;
+        vertical-align: middle;
+		font-size: 16px;
+		border: 3px;
+		margin: 10px;
+		height: 40px;
+	} 
+	                
+	.service_msg {
+		font-weight:bold;
+	}
+	 .service_unknown_state {
+		display:none;
+	}  	
+           
+
+	 .service_signin {
+   		padding-left: 20px;
+			
+ 	   	       background-image:url(images/lock.png);
+			 	background-repeat: no-repeat;
+			 	background-position: center left;
+				background-size: 100%;		
+	}
+	
+	 .service_available{
+   		padding-left: 20px;
+			
+ 	   	       background-image:url(images/tick.png);
+			 	background-repeat: no-repeat;
+			 	background-position: center left;
+				background-size: 100%;		
+	} 
+	
+	 .service_unavailable {
+   		padding-left: 20px;
+ 
+ 	   	       background-image:url(images/cross.png);
+			 	background-repeat: no-repeat;
+			 	background-position: center left;
+				background-size: 100%;		
+	} 
+	
+	 .service_connecting {
+			padding-left: 20px;
+ 	   	       background-image:url(images/hourglass.png);
+			 	background-repeat: no-repeat;
+			 	background-position: center left;
+				background-size: 100%;
+		
+	}
+    	
+	.alerts a.selected {
+
+	background-image:url(images/AccordionTab0.gif);
+	color:white;
+	height:40px;
+	}
+	
+	.alerts a {
+
+   background-image:url(images/AccordionTab2.gif);     
+	border-bottom:1px solid #999999;
+	border-top:1px solid #FFFFFF;
+	color:white;
+	cursor:pointer;
+	display:block;
+	font-size:18px;
+	font-weight:bold;
+	margin-top:0;
+	padding:5px;
+	text-decoration:none;
+ 
+      height: 30px;
+ 		   	       
+	} 
+	
+	.alerts p {
+	border:medium none; 
+	font-size:10px;
+	font-weight:bold;
+	margin:0;
+	padding:10px;
+	text-decoration:none; 
+	border-width:0;
+	}
+	
+  
+	
+	.alerts h3 img {
+		width: 32px;
+		height: 32px;
+	} 
+	
+	.alert_header p {
+		color: brown;
+		font-size: 16px;
+	}
+	
+	.treeview a {
+		font-size:14px; 
+		color: black;		 
+	} 
+	
+	.folder {
+		font-size:15px;
+	}   
+	
+	#admin a { 
+   background-image:url(images/AccordionTab0.gif); 
+	background-repeat: repeat;
+	background-position: center middle;
+	background-size: 100%;   	
+		border:1px solid #999999;
+        text-align: center;
+		color:black;
+		display:block;
+		font-size:14px;
+		font-weight:bold;
+		margin-top:0;
+		padding:5px;
+		text-decoration:none;	
+ 
+		margin-bottom:15px;
+		position:relative;
+		top:10%;
+		bottom:10%; 
+
+		}			
+		
+	}   
+
+
+	.ui-layout-pane { /* all 'panes' */ 
+		padding:		10px; 
+		background:		#FFF; 
+		border-top:		1px solid #BBB;
+		border-bottom:	1px solid #BBB;
+		overflow:		hidden;
+		}
+		.ui-layout-pane-north ,
+		.ui-layout-pane-south {
+			border: 1px solid #BBB;
+		} 
+		.ui-layout-pane-west {
+			border-left: 1px solid #BBB;
+		} 
+		.ui-layout-pane-east {
+			border-right: 1px solid #BBB;
+		} 
+		.ui-layout-pane-center {
+			border-left:  0;
+			border-right: 0;
+			} 
+			.inner-center {
+				border: 1px solid #BBB;
+			} 
+
+		.outer-west ,
+		.outer-east {
+			background-color: #EEE;
+		}
+		.middle-west ,
+		.middle-east {
+			background-color: #F8F8F8;
+		}
+
+	.ui-layout-resizer { /* all 'resizer-bars' */ 
+		background: #DDD; 
+		}
+		.ui-layout-resizer:hover { /* all 'resizer-bars' */ 
+			background: #FED; 
+		}
+		.ui-layout-resizer-west {
+			border-left: 1px solid #BBB;
+		}
+		.ui-layout-resizer-east {
+			border-right: 1px solid #BBB;
+		}
+
+	.ui-layout-toggler { /* all 'toggler-buttons' */ 
+		background: #AAA; 
+		} 
+		.ui-layout-toggler:hover { /* all 'toggler-buttons' */ 
+			background: #FC3; 
+		} 
+
+	.outer-center ,
+	.middle-center {
+		/* center pane that are 'containers' for a nested layout */ 
+		padding: 0; 
+		border: 0; 
+		}
+ 
+		.header { 
+			background: #80ade5 url(images/pane_header.png) 0 50% repeat-x;
+			border: 1px;
+			font-weight: bold;
+			text-align: center;
+    		position: relative;
+			overflow: hidden;
+			font-size:25px; 
+			top: -15px;
+			height: 28px; 
+ 
+		}
+
+		#demo_mask {
+		   background: #FFF;
+		   opacity: .30;
+		   alpha(opacity=30);
+		   position: absolute;
+		   top: 0;
+		   left: 0;
+		   width: 0;
+		   height: 0;
+		   zIndex: 1;
+
+		}
+
+	</style>
+
+
+</head>
+<body>
+
+  <div id='login'>
+ 	<p id="validateTips">Your credentials will be transmitted over
+		secure connection.</p>
+
+	<form>
+	<fieldset>
+		<label for="name">User name</label>
+		<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+			<label for="password">Password</label>
+		<input type="password" name="password" id="password" value="" class="text ui-widget-content ui-corner-all" />
+
+	</fieldset>
+		<div id='status'></div>
+	</form>
+
+	<div id='spinner'></div>
+  </div>
+         
+<div id="admin_message">
+ 	<p >Please send message to Weazard</p>
+
+	<form>
+	<fieldset>
+		<label for="subject">Subject:</label>
+		<input type="text" name="subject" id="subject" class="text ui-widget-content ui-corner-all" />
+			<label for="message_body">Comment/Question:</label>
+		<textarea name="message_body" id="message_body" value="" rows=6 cols=30 wrap="soft" class="text ui-widget-content ui-corner-all" ></textarea>
+
+	</fieldset>
+	</form>	
+</div>	       
+ 
+<div class='outer-center' style = "overflow: hidden;">
+	<div class='ui-layout-north' > 
+		<h1  class="header">Weather alerts</h1>
+	</div>
+	<div class='ui-layout-center'>	 
+		<div id="alerts" class="alerts">
+		</div>
+	</div>
+</div>
+
+<div id='services' class= 'outer-west' style = "overflow: hidden;">
+	<div class = 'ui-layout-north' style = 'padding: 0;'>
+		<h1 class="header">Weather stations</h1>
+	</div>
+
+	<div class = 'ui-layout-center'>
+		<ul id="service_nodes" class="filetree treeview-famfamfam">
+
+		</ul> 
+	</div>
+</div> 
+				
+<div id='misc' class='outer-east'>
+
+	<div id="network" style="left:0; right:0;" class = 'ui-layout-north'>
+		<h1 class='header'><span>Network status</span></h1>
+		<div ><a id = "jabber_service" class='service_signin' href="#" ><span>Jabber over HTTP</span>&nbsp;<span class="service_msg">- please sign in</span></a></div>
+		<div > <a  id = "weather_service" class='service_unknown_state' href="#" ><span>Weather service</span>&nbsp;<span class="service_msg"></span></a></div>
+			
+	</div>
+	<div id="admin" class = 'ui-layout-center'>
+		<h1  class='header'>Support</h1>
+		   	<div><a id="ask_admin" href="#">Send message to admin</a></div>
+		    <div><a id="help" href="#">Read about the demo</a></div>
+	</div>
+
+</div>
+	   <div id='log' class='ui-layout-south'>Log</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/erltwit/!svn/ver/2/trunk/web/boxy-0.1.4
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/erltwit/!svn/ver/2/trunk/web/boxy-0.1.4/LICENSE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/erltwit/!svn/ver/2/trunk/web/boxy-0.1.4/Rakefile
+END
+CHANGES
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/erltwit/!svn/ver/2/trunk/web/boxy-0.1.4/CHANGES
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/erltwit/!svn/ver/2/trunk/web/boxy-0.1.4/README
+END
